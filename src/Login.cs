@@ -63,5 +63,10 @@ namespace TrabalhoLP3
         {
             return TbxPassword.Text;
         }
+
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

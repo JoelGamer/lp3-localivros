@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoLP3
 {
-    partial class frmSobre
+    partial class FrmAbout
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,7 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Gustavo Pertile";
             // 
-            // frmSobre
+            // FrmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,8 +95,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmSobre";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "FrmAbout";
             this.Text = "Sobre";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAbout_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
