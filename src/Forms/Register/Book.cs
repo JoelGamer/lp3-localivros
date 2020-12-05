@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrabalhoLP3
+namespace TrabalhoLP3.Forms.Register
 {
-    public partial class frmSobre : Form
+    public partial class Book : Form
     {
-        public frmSobre()
+        public Book()
         {
             InitializeComponent();
         }

@@ -61,6 +61,48 @@
     </Compile>
     <Compile Include="Database\Connection.cs" />
     <Compile Include="Database\Tables\TableUsers.cs" />
+    <Compile Include="Forms\Library\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Library\Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Library\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Library\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Finance\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Finance\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Register\Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Register\Author.Designer.cs">
+      <DependentUpon>Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Register\Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Register\Book.Designer.cs">
+      <DependentUpon>Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Register\Genre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Register\Genre.Designer.cs">
+      <DependentUpon>Genre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,17 +123,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sobre.cs">
+    <Compile Include="About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sobre.Designer.cs">
-      <DependentUpon>Sobre.cs</DependentUpon>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Books.resx">
       <DependentUpon>Books.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateLogin.resx">
       <DependentUpon>CreateLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Register\Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -110,9 +158,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sobre.resx">
-      <DependentUpon>Sobre.cs</DependentUpon>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,6 +176,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\authors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
