@@ -1,2 +1,2 @@
 # lp3-localivros
-Uma locadora de livros em C#
+Um ERP de uma livraria em C#
