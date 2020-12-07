@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using TrabalhoLP3.Classes;
+using TrabalhoLP3.Classes.Database;
 
 namespace TrabalhoLP3.Database.Tables
 {
@@ -30,6 +30,8 @@ namespace TrabalhoLP3.Database.Tables
                     user.SetCPF(sqlDataReader.GetInt32(4));
                     users.Add(user);
                 }
+
+                sqlDataReader.Close();
             }
 
             sqlCommand.Dispose();

@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TbxPassword = new System.Windows.Forms.TextBox();
-            this.LblCreateAccount = new System.Windows.Forms.Label();
+            this.ChbxRememberPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +50,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(119, 270);
+            this.btnLogin.Location = new System.Drawing.Point(115, 267);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 34);
             this.btnLogin.TabIndex = 3;
@@ -97,23 +97,22 @@
             this.TbxPassword.TabIndex = 2;
             this.TbxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxPassword_KeyPress);
             // 
-            // LblCreateAccount
+            // ChbxRememberPassword
             // 
-            this.LblCreateAccount.AutoSize = true;
-            this.LblCreateAccount.ForeColor = System.Drawing.Color.Blue;
-            this.LblCreateAccount.Location = new System.Drawing.Point(21, 232);
-            this.LblCreateAccount.Name = "LblCreateAccount";
-            this.LblCreateAccount.Size = new System.Drawing.Size(78, 13);
-            this.LblCreateAccount.TabIndex = 6;
-            this.LblCreateAccount.Text = "Não tem login?";
-            this.LblCreateAccount.Click += new System.EventHandler(this.LblCreateAccount_Click);
+            this.ChbxRememberPassword.AutoSize = true;
+            this.ChbxRememberPassword.Location = new System.Drawing.Point(19, 235);
+            this.ChbxRememberPassword.Name = "ChbxRememberPassword";
+            this.ChbxRememberPassword.Size = new System.Drawing.Size(98, 17);
+            this.ChbxRememberPassword.TabIndex = 6;
+            this.ChbxRememberPassword.Text = "Lembrar Senha";
+            this.ChbxRememberPassword.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 316);
-            this.Controls.Add(this.LblCreateAccount);
+            this.ClientSize = new System.Drawing.Size(322, 313);
+            this.Controls.Add(this.ChbxRememberPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TbxPassword);
             this.Controls.Add(this.label2);
@@ -137,7 +136,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TbxPassword;
-        private System.Windows.Forms.Label LblCreateAccount;
+        private System.Windows.Forms.CheckBox ChbxRememberPassword;
     }
 }
 

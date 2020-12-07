@@ -4,26 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabalhoLP3.Classes
+namespace TrabalhoLP3.Classes.Database
 {
-    class User
+    class User : DatabaseRegister
     {
-        readonly int uid;
-        string name;
-        string username;
-        long cpf;
+        private string name;
+        private string username;
+        private long cpf;
 
         public User() { }
 
-        public User(int uid)
-        {
-            this.uid = uid;
-        }
-
-        public int GetUid()
-        {
-            return uid;
-        }
+        public User(int uid) : base(uid) { }
 
         public string GetName()
         {
