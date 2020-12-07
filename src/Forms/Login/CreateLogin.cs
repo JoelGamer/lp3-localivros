@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoLP3.Database.Tables;
-using TrabalhoLP3.Classes;
+using TrabalhoLP3.Classes.Database;
 
 namespace TrabalhoLP3
 {

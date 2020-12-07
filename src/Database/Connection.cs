@@ -39,6 +39,11 @@ namespace TrabalhoLP3.Database
             return dataTable;
         }
 
+        public string FormatDateTimeToSQLDate(DateTime dateTime)
+        {
+            return dateTime.Year != 1 ? "'" + dateTime.ToString("yyyy-MM-dd") + "'" : "null";
+        }
+
         public SqlConnection GetConnection()
         {
             return connection;

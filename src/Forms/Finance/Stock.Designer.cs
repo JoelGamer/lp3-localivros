@@ -1,4 +1,4 @@
-﻿namespace TrabalhoLP3.Forms.Library
+﻿namespace TrabalhoLP3.Forms.Finance
 {
     partial class Stock
     {

@@ -22,7 +22,7 @@ namespace TrabalhoLP3
 
         private void FrmAbout_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmMainMenu.setIsAboutOpen(false);
+            frmMainMenu.SetIsFormOpen(false);
         }
     }
 }

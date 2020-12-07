@@ -12,9 +12,22 @@ namespace TrabalhoLP3.Forms.Security
 {
     public partial class FrmUser : Form
     {
-        public FrmUser()
+        private readonly FrmMainMenu frmMainMenu;
+
+        public FrmUser(FrmMainMenu frmMainMenu)
         {
             InitializeComponent();
+            this.frmMainMenu = frmMainMenu;
+        }
+
+        private void FrmUser_Load(object sender, EventArgs e)
+        {
+            frmMainMenu.SetIsFormOpen(false);
+        }
+
+        private void FrmUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMainMenu.SetIsFormOpen(false);
         }
     }
 }

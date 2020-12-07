@@ -33,11 +33,26 @@ CREATE TABLE BOOK(
 	uid INT not null IDENTITY(1,1),
 	name VARCHAR(80) not null,
 	description VARCHAR(255) not null,
-	author VARCHAR(120) not null,
+	author INT not null,
 	pages INT not null,
 	genre INT not null,
 	release_date DATE not null,
-	quantity INT not null,
-	price INT not null,
+	price FLOAT not null,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE AUTHOR(
+	uid INT not null IDENTITY(1,1),
+	name VARCHAR(80) not null,
+	birth_date DATE not null,
+	death_date DATE,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE GENRE(
+	uid INT not null IDENTITY(1,1),
+	name VARCHAR(80) not null,
 	PRIMARY KEY(uid),
 );

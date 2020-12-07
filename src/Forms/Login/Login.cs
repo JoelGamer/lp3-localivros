@@ -17,6 +17,10 @@ namespace TrabalhoLP3
         public FrmLogin()
         {
             InitializeComponent();
+
+            tbxUser.Text = Properties.Settings.Default.Username;
+            TbxPassword.Text = Properties.Settings.Default.Password;
+            ChbxRememberPassword.Checked = Properties.Settings.Default.IsSavingPassword;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -45,6 +49,7 @@ namespace TrabalhoLP3
 
             if (new TableUsers().IsValidLogin(username, password))
             {
+                SaveSettings();
                 Hide();
                 new FrmMainMenu().Show();
             }
@@ -52,6 +57,23 @@ namespace TrabalhoLP3
             {
                 MessageBox.Show("Usuário e/ou senha inválido!", "Login", MessageBoxButtons.OK);
             }
+        }
+
+        private void SaveSettings()
+        {
+            if (ChbxRememberPassword.Checked)
+            {
+                Properties.Settings.Default.Username = tbxUser.Text;
+                Properties.Settings.Default.Password = TbxPassword.Text;
+                Properties.Settings.Default.IsSavingPassword = ChbxRememberPassword.Checked;
+            } else
+            {
+                Properties.Settings.Default.Username = "";
+                Properties.Settings.Default.Password = "";
+                Properties.Settings.Default.IsSavingPassword = false;
+            }
+
+            Properties.Settings.Default.Save();
         }
 
         public string GetTbxUsername()

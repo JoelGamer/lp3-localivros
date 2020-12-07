@@ -31,53 +31,53 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TbpRegister = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.PbxAuthor = new System.Windows.Forms.PictureBox();
+            this.BtnAuthor = new System.Windows.Forms.Button();
+            this.PbxGenre = new System.Windows.Forms.PictureBox();
+            this.BtnGenre = new System.Windows.Forms.Button();
+            this.PbxBooks = new System.Windows.Forms.PictureBox();
+            this.BtnBooks = new System.Windows.Forms.Button();
             this.TbpLibrary = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.TbpFinance = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.TbpSecurity = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.PbxUsers = new System.Windows.Forms.PictureBox();
             this.BtnUsers = new System.Windows.Forms.Button();
             this.mstItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.MstItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mstItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mstMainMenu = new System.Windows.Forms.MenuStrip();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PbxUsers = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.TbpRegister.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxAuthor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGenre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxBooks)).BeginInit();
             this.TbpLibrary.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.TbpFinance.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.TbpSecurity.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.mstMainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.TbpFinance.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.TbpSecurity.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).BeginInit();
+            this.mstMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -107,27 +107,83 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
-            this.flowLayoutPanel1.Controls.Add(this.button9);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
-            this.flowLayoutPanel1.Controls.Add(this.button6);
+            this.flowLayoutPanel1.Controls.Add(this.PbxAuthor);
+            this.flowLayoutPanel1.Controls.Add(this.BtnAuthor);
+            this.flowLayoutPanel1.Controls.Add(this.PbxGenre);
+            this.flowLayoutPanel1.Controls.Add(this.BtnGenre);
+            this.flowLayoutPanel1.Controls.Add(this.PbxBooks);
+            this.flowLayoutPanel1.Controls.Add(this.BtnBooks);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button3
+            // PbxAuthor
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(57, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(244, 48);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Autores";
-            this.button3.UseVisualStyleBackColor = true;
+            this.PbxAuthor.Image = global::TrabalhoLP3.Properties.Resources.authors;
+            this.PbxAuthor.Location = new System.Drawing.Point(3, 3);
+            this.PbxAuthor.Name = "PbxAuthor";
+            this.PbxAuthor.Size = new System.Drawing.Size(48, 48);
+            this.PbxAuthor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxAuthor.TabIndex = 6;
+            this.PbxAuthor.TabStop = false;
+            this.PbxAuthor.Click += new System.EventHandler(this.PbxAuthor_Click);
+            // 
+            // BtnAuthor
+            // 
+            this.BtnAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAuthor.Location = new System.Drawing.Point(57, 3);
+            this.BtnAuthor.Name = "BtnAuthor";
+            this.BtnAuthor.Size = new System.Drawing.Size(244, 48);
+            this.BtnAuthor.TabIndex = 5;
+            this.BtnAuthor.Text = "Autores";
+            this.BtnAuthor.UseVisualStyleBackColor = true;
+            this.BtnAuthor.Click += new System.EventHandler(this.BtnAuthor_Click);
+            // 
+            // PbxGenre
+            // 
+            this.PbxGenre.Image = global::TrabalhoLP3.Properties.Resources.genres;
+            this.PbxGenre.Location = new System.Drawing.Point(3, 57);
+            this.PbxGenre.Name = "PbxGenre";
+            this.PbxGenre.Size = new System.Drawing.Size(48, 48);
+            this.PbxGenre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxGenre.TabIndex = 10;
+            this.PbxGenre.TabStop = false;
+            this.PbxGenre.Click += new System.EventHandler(this.PbxGenre_Click);
+            // 
+            // BtnGenre
+            // 
+            this.BtnGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGenre.Location = new System.Drawing.Point(57, 57);
+            this.BtnGenre.Name = "BtnGenre";
+            this.BtnGenre.Size = new System.Drawing.Size(244, 48);
+            this.BtnGenre.TabIndex = 9;
+            this.BtnGenre.Text = "Gêneros";
+            this.BtnGenre.UseVisualStyleBackColor = true;
+            this.BtnGenre.Click += new System.EventHandler(this.BtnGenre_Click);
+            // 
+            // PbxBooks
+            // 
+            this.PbxBooks.Image = global::TrabalhoLP3.Properties.Resources.books;
+            this.PbxBooks.Location = new System.Drawing.Point(3, 111);
+            this.PbxBooks.Name = "PbxBooks";
+            this.PbxBooks.Size = new System.Drawing.Size(48, 48);
+            this.PbxBooks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxBooks.TabIndex = 8;
+            this.PbxBooks.TabStop = false;
+            this.PbxBooks.Click += new System.EventHandler(this.PbxBooks_Click);
+            // 
+            // BtnBooks
+            // 
+            this.BtnBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBooks.Location = new System.Drawing.Point(57, 111);
+            this.BtnBooks.Name = "BtnBooks";
+            this.BtnBooks.Size = new System.Drawing.Size(244, 48);
+            this.BtnBooks.TabIndex = 7;
+            this.BtnBooks.Text = "Livros";
+            this.BtnBooks.UseVisualStyleBackColor = true;
+            this.BtnBooks.Click += new System.EventHandler(this.BtnBooks_Click);
             // 
             // TbpLibrary
             // 
@@ -151,6 +207,46 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::TrabalhoLP3.Properties.Resources.clients;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(57, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(244, 48);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "Clientes";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TrabalhoLP3.Properties.Resources.employees;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 57);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(57, 57);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(244, 48);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Funcionários";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // TbpFinance
             // 
@@ -177,6 +273,66 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::TrabalhoLP3.Properties.Resources.stock;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(57, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(244, 48);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Compras";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::TrabalhoLP3.Properties.Resources.stock;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 57);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(57, 57);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(244, 48);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "Vendas";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::TrabalhoLP3.Properties.Resources.stock;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 111);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox7.TabIndex = 11;
+            this.pictureBox7.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(57, 111);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(244, 48);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Estoque";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // TbpSecurity
             // 
             this.TbpSecurity.Controls.Add(this.flowLayoutPanel3);
@@ -197,6 +353,17 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel3.TabIndex = 1;
+            // 
+            // PbxUsers
+            // 
+            this.PbxUsers.Image = global::TrabalhoLP3.Properties.Resources.users;
+            this.PbxUsers.Location = new System.Drawing.Point(3, 3);
+            this.PbxUsers.Name = "PbxUsers";
+            this.PbxUsers.Size = new System.Drawing.Size(48, 48);
+            this.PbxUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxUsers.TabIndex = 2;
+            this.PbxUsers.TabStop = false;
+            this.PbxUsers.Click += new System.EventHandler(this.PbxUsers_Click);
             // 
             // BtnUsers
             // 
@@ -246,167 +413,6 @@
             this.mstMainMenu.TabIndex = 0;
             this.mstMainMenu.Text = "menuStrip1";
             // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(57, 57);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(244, 48);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Funcionários";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(57, 111);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(244, 48);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Livros";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(57, 57);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(244, 48);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Gêneros";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(57, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(244, 48);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Clientes";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TrabalhoLP3.Properties.Resources.authors;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::TrabalhoLP3.Properties.Resources.genres;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 57);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TrabalhoLP3.Properties.Resources.books;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 111);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::TrabalhoLP3.Properties.Resources.clients;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TrabalhoLP3.Properties.Resources.employees;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 57);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // PbxUsers
-            // 
-            this.PbxUsers.Image = global::TrabalhoLP3.Properties.Resources.users;
-            this.PbxUsers.Location = new System.Drawing.Point(3, 3);
-            this.PbxUsers.Name = "PbxUsers";
-            this.PbxUsers.Size = new System.Drawing.Size(48, 48);
-            this.PbxUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PbxUsers.TabIndex = 2;
-            this.PbxUsers.TabStop = false;
-            this.PbxUsers.Click += new System.EventHandler(this.PbxUsers_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::TrabalhoLP3.Properties.Resources.stock;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 111);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(57, 111);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(244, 48);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Estoque";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::TrabalhoLP3.Properties.Resources.stock;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(57, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(244, 48);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Compras";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::TrabalhoLP3.Properties.Resources.stock;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 57);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(57, 57);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(244, 48);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "Vendas";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,36 +421,40 @@
             this.ClientSize = new System.Drawing.Size(990, 516);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mstMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mstMainMenu;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-Livraria";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMainMenu_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMainMenu_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.TbpRegister.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxAuthor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGenre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxBooks)).EndInit();
             this.TbpLibrary.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.TbpFinance.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.TbpSecurity.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).EndInit();
             this.mstMainMenu.ResumeLayout(false);
             this.mstMainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,14 +476,14 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button BtnUsers;
         private System.Windows.Forms.PictureBox PbxUsers;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox PbxAuthor;
+        private System.Windows.Forms.Button BtnAuthor;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.PictureBox PbxBooks;
+        private System.Windows.Forms.Button BtnBooks;
+        private System.Windows.Forms.PictureBox PbxGenre;
+        private System.Windows.Forms.Button BtnGenre;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox7;
