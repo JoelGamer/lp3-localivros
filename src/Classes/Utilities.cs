@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TrabalhoLP3.Classes
 {
@@ -34,6 +35,24 @@ namespace TrabalhoLP3.Classes
             return IsValidDateTime(dateTime) 
                 ? dateTime.ToString("dd/MM/yyyy")
                 : "N/D";
+        }
+
+        public string GetStringifiedMaskedTextBox(MaskedTextBox maskedTextBox)
+        {
+            maskedTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            string stringifiedText = maskedTextBox.Text;
+            maskedTextBox.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+            return stringifiedText;
+        }
+
+        public string ConvertToCurrency(double value)
+        {
+            return value.ToString("C");
+        }
+
+        public string ConvertToCurrency(string value)
+        {
+            return ConvertToCurrency(Convert.ToDouble(value));
         }
     }
 }

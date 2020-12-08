@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoLP3.Forms.Finance
 {
-    partial class Stock
+    partial class FrmStock
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmStock
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Stock";
+            this.Name = "FrmStock";
+            this.Text = "Estoque";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

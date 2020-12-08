@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrabalhoLP3.Forms.Library
+namespace TrabalhoLP3.Forms.Finance
 {
-    public partial class Employee : Form
+    public partial class FrmSales : Form
     {
-        public Employee()
+        public FrmSales(FrmMainMenu frmMainMenu)
         {
             InitializeComponent();
         }

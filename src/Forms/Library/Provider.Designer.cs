@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoLP3.Forms.Library
 {
-    partial class FrmClient
+    partial class FrmProvider
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mstClient = new System.Windows.Forms.MenuStrip();
+            this.mstProvider = new System.Windows.Forms.MenuStrip();
             this.MstItemFind = new System.Windows.Forms.ToolStripMenuItem();
             this.MstItemCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.MstItemEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.MstItemDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TbxAddressNumber = new System.Windows.Forms.TextBox();
+            this.LblAddressNumber = new System.Windows.Forms.Label();
+            this.LblAddressNumberPlaceholder = new System.Windows.Forms.Label();
+            this.TbxAddress = new System.Windows.Forms.TextBox();
+            this.LblAddress = new System.Windows.Forms.Label();
+            this.LblAddressPlaceholder = new System.Windows.Forms.Label();
             this.LblCNPJPlaceholder = new System.Windows.Forms.Label();
             this.LblCNPJ = new System.Windows.Forms.Label();
             this.MTbxCNPJ = new System.Windows.Forms.MaskedTextBox();
@@ -44,30 +51,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.LblNamePlaceholder = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TbxAddressNumber = new System.Windows.Forms.TextBox();
-            this.LblAddressNumber = new System.Windows.Forms.Label();
-            this.LblAddressNumberPlaceholder = new System.Windows.Forms.Label();
-            this.TbxAddress = new System.Windows.Forms.TextBox();
-            this.LblAddress = new System.Windows.Forms.Label();
-            this.LblAddressPlaceholder = new System.Windows.Forms.Label();
-            this.mstClient.SuspendLayout();
+            this.mstProvider.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mstClient
+            // mstProvider
             // 
-            this.mstClient.AllowMerge = false;
-            this.mstClient.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mstProvider.AllowMerge = false;
+            this.mstProvider.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MstItemFind,
             this.MstItemCreate,
             this.MstItemEdit,
             this.MstItemDelete});
-            this.mstClient.Location = new System.Drawing.Point(0, 0);
-            this.mstClient.Name = "mstClient";
-            this.mstClient.Size = new System.Drawing.Size(405, 29);
-            this.mstClient.TabIndex = 30;
-            this.mstClient.Text = "menuStrip1";
+            this.mstProvider.Location = new System.Drawing.Point(0, 0);
+            this.mstProvider.Name = "mstProvider";
+            this.mstProvider.Size = new System.Drawing.Size(411, 29);
+            this.mstProvider.TabIndex = 31;
+            this.mstProvider.Text = "menuStrip1";
             // 
             // MstItemFind
             // 
@@ -101,116 +101,6 @@
             this.MstItemDelete.Text = "&Apagar";
             this.MstItemDelete.Click += new System.EventHandler(this.MstItemDelete_Click);
             // 
-            // LblCNPJPlaceholder
-            // 
-            this.LblCNPJPlaceholder.AutoSize = true;
-            this.LblCNPJPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCNPJPlaceholder.Location = new System.Drawing.Point(12, 129);
-            this.LblCNPJPlaceholder.Name = "LblCNPJPlaceholder";
-            this.LblCNPJPlaceholder.Size = new System.Drawing.Size(76, 26);
-            this.LblCNPJPlaceholder.TabIndex = 69;
-            this.LblCNPJPlaceholder.Text = "CNPJ:";
-            // 
-            // LblCNPJ
-            // 
-            this.LblCNPJ.AutoSize = true;
-            this.LblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCNPJ.Location = new System.Drawing.Point(129, 129);
-            this.LblCNPJ.Name = "LblCNPJ";
-            this.LblCNPJ.Size = new System.Drawing.Size(65, 26);
-            this.LblCNPJ.TabIndex = 68;
-            this.LblCNPJ.Text = "_cpf_";
-            // 
-            // MTbxCNPJ
-            // 
-            this.MTbxCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MTbxCNPJ.Location = new System.Drawing.Point(129, 126);
-            this.MTbxCNPJ.Mask = "00,000,000/0000-00";
-            this.MTbxCNPJ.Name = "MTbxCNPJ";
-            this.MTbxCNPJ.Size = new System.Drawing.Size(262, 32);
-            this.MTbxCNPJ.TabIndex = 61;
-            this.MTbxCNPJ.Visible = false;
-            // 
-            // TbxUid
-            // 
-            this.TbxUid.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxUid.Location = new System.Drawing.Point(129, 49);
-            this.TbxUid.Name = "TbxUid";
-            this.TbxUid.Size = new System.Drawing.Size(262, 32);
-            this.TbxUid.TabIndex = 53;
-            this.TbxUid.Visible = false;
-            // 
-            // TbxName
-            // 
-            this.TbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxName.Location = new System.Drawing.Point(129, 87);
-            this.TbxName.Name = "TbxName";
-            this.TbxName.Size = new System.Drawing.Size(262, 32);
-            this.TbxName.TabIndex = 54;
-            this.TbxName.Visible = false;
-            // 
-            // BtnRight
-            // 
-            this.BtnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRight.Location = new System.Drawing.Point(281, 322);
-            this.BtnRight.Name = "BtnRight";
-            this.BtnRight.Size = new System.Drawing.Size(110, 48);
-            this.BtnRight.TabIndex = 56;
-            this.BtnRight.Text = "Próximo";
-            this.BtnRight.UseVisualStyleBackColor = true;
-            this.BtnRight.Click += new System.EventHandler(this.BtnRight_Click);
-            // 
-            // BtnLeft
-            // 
-            this.BtnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLeft.Location = new System.Drawing.Point(17, 322);
-            this.BtnLeft.Name = "BtnLeft";
-            this.BtnLeft.Size = new System.Drawing.Size(110, 48);
-            this.BtnLeft.TabIndex = 55;
-            this.BtnLeft.Text = "Anterior";
-            this.BtnLeft.UseVisualStyleBackColor = true;
-            this.BtnLeft.Click += new System.EventHandler(this.BtnLeft_Click);
-            // 
-            // LblUid
-            // 
-            this.LblUid.AutoSize = true;
-            this.LblUid.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUid.Location = new System.Drawing.Point(129, 54);
-            this.LblUid.Name = "LblUid";
-            this.LblUid.Size = new System.Drawing.Size(53, 26);
-            this.LblUid.TabIndex = 60;
-            this.LblUid.Text = "_id_";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 26);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "ID:";
-            // 
-            // LblName
-            // 
-            this.LblName.AutoSize = true;
-            this.LblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblName.Location = new System.Drawing.Point(129, 90);
-            this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(91, 26);
-            this.LblName.TabIndex = 58;
-            this.LblName.Text = "_name_";
-            // 
-            // LblNamePlaceholder
-            // 
-            this.LblNamePlaceholder.AutoSize = true;
-            this.LblNamePlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNamePlaceholder.Location = new System.Drawing.Point(12, 90);
-            this.LblNamePlaceholder.Name = "LblNamePlaceholder";
-            this.LblNamePlaceholder.Size = new System.Drawing.Size(77, 26);
-            this.LblNamePlaceholder.TabIndex = 57;
-            this.LblNamePlaceholder.Text = "Nome:";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.TbxAddressNumber);
@@ -220,10 +110,10 @@
             this.groupBox1.Controls.Add(this.LblAddress);
             this.groupBox1.Controls.Add(this.LblAddressPlaceholder);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 164);
+            this.groupBox1.Location = new System.Drawing.Point(17, 161);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 143);
-            this.groupBox1.TabIndex = 70;
+            this.groupBox1.Size = new System.Drawing.Size(374, 120);
+            this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Endereço";
             // 
@@ -287,11 +177,121 @@
             this.LblAddressPlaceholder.TabIndex = 69;
             this.LblAddressPlaceholder.Text = "Rua:";
             // 
-            // FrmClient
+            // LblCNPJPlaceholder
+            // 
+            this.LblCNPJPlaceholder.AutoSize = true;
+            this.LblCNPJPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCNPJPlaceholder.Location = new System.Drawing.Point(12, 126);
+            this.LblCNPJPlaceholder.Name = "LblCNPJPlaceholder";
+            this.LblCNPJPlaceholder.Size = new System.Drawing.Size(76, 26);
+            this.LblCNPJPlaceholder.TabIndex = 81;
+            this.LblCNPJPlaceholder.Text = "CNPJ:";
+            // 
+            // LblCNPJ
+            // 
+            this.LblCNPJ.AutoSize = true;
+            this.LblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCNPJ.Location = new System.Drawing.Point(129, 126);
+            this.LblCNPJ.Name = "LblCNPJ";
+            this.LblCNPJ.Size = new System.Drawing.Size(65, 26);
+            this.LblCNPJ.TabIndex = 80;
+            this.LblCNPJ.Text = "_cpf_";
+            // 
+            // MTbxCNPJ
+            // 
+            this.MTbxCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTbxCNPJ.Location = new System.Drawing.Point(129, 123);
+            this.MTbxCNPJ.Mask = "00,000,000/0000-00";
+            this.MTbxCNPJ.Name = "MTbxCNPJ";
+            this.MTbxCNPJ.Size = new System.Drawing.Size(262, 32);
+            this.MTbxCNPJ.TabIndex = 79;
+            this.MTbxCNPJ.Visible = false;
+            // 
+            // TbxUid
+            // 
+            this.TbxUid.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxUid.Location = new System.Drawing.Point(129, 46);
+            this.TbxUid.Name = "TbxUid";
+            this.TbxUid.Size = new System.Drawing.Size(262, 32);
+            this.TbxUid.TabIndex = 71;
+            this.TbxUid.Visible = false;
+            // 
+            // TbxName
+            // 
+            this.TbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxName.Location = new System.Drawing.Point(129, 84);
+            this.TbxName.Name = "TbxName";
+            this.TbxName.Size = new System.Drawing.Size(262, 32);
+            this.TbxName.TabIndex = 72;
+            this.TbxName.Visible = false;
+            // 
+            // BtnRight
+            // 
+            this.BtnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRight.Location = new System.Drawing.Point(281, 319);
+            this.BtnRight.Name = "BtnRight";
+            this.BtnRight.Size = new System.Drawing.Size(110, 48);
+            this.BtnRight.TabIndex = 74;
+            this.BtnRight.Text = "Próximo";
+            this.BtnRight.UseVisualStyleBackColor = true;
+            this.BtnRight.Click += new System.EventHandler(this.BtnRight_Click);
+            // 
+            // BtnLeft
+            // 
+            this.BtnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLeft.Location = new System.Drawing.Point(17, 319);
+            this.BtnLeft.Name = "BtnLeft";
+            this.BtnLeft.Size = new System.Drawing.Size(110, 48);
+            this.BtnLeft.TabIndex = 73;
+            this.BtnLeft.Text = "Anterior";
+            this.BtnLeft.UseVisualStyleBackColor = true;
+            this.BtnLeft.Click += new System.EventHandler(this.BtnLeft_Click);
+            // 
+            // LblUid
+            // 
+            this.LblUid.AutoSize = true;
+            this.LblUid.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUid.Location = new System.Drawing.Point(129, 51);
+            this.LblUid.Name = "LblUid";
+            this.LblUid.Size = new System.Drawing.Size(53, 26);
+            this.LblUid.TabIndex = 78;
+            this.LblUid.Text = "_id_";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 26);
+            this.label5.TabIndex = 77;
+            this.label5.Text = "ID:";
+            // 
+            // LblName
+            // 
+            this.LblName.AutoSize = true;
+            this.LblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblName.Location = new System.Drawing.Point(129, 87);
+            this.LblName.Name = "LblName";
+            this.LblName.Size = new System.Drawing.Size(91, 26);
+            this.LblName.TabIndex = 76;
+            this.LblName.Text = "_name_";
+            // 
+            // LblNamePlaceholder
+            // 
+            this.LblNamePlaceholder.AutoSize = true;
+            this.LblNamePlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNamePlaceholder.Location = new System.Drawing.Point(12, 87);
+            this.LblNamePlaceholder.Name = "LblNamePlaceholder";
+            this.LblNamePlaceholder.Size = new System.Drawing.Size(77, 26);
+            this.LblNamePlaceholder.TabIndex = 75;
+            this.LblNamePlaceholder.Text = "Nome:";
+            // 
+            // FrmProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 385);
+            this.ClientSize = new System.Drawing.Size(411, 378);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LblCNPJPlaceholder);
             this.Controls.Add(this.LblCNPJ);
@@ -304,12 +304,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.LblNamePlaceholder);
-            this.Controls.Add(this.mstClient);
-            this.Name = "FrmClient";
-            this.Text = "Clientes";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmClient_FormClosing);
-            this.mstClient.ResumeLayout(false);
-            this.mstClient.PerformLayout();
+            this.Controls.Add(this.mstProvider);
+            this.Name = "FrmProvider";
+            this.Text = "Fornecedores";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProvider_FormClosing);
+            this.mstProvider.ResumeLayout(false);
+            this.mstProvider.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -319,11 +319,18 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip mstClient;
+        private System.Windows.Forms.MenuStrip mstProvider;
         private System.Windows.Forms.ToolStripMenuItem MstItemFind;
         private System.Windows.Forms.ToolStripMenuItem MstItemCreate;
         private System.Windows.Forms.ToolStripMenuItem MstItemEdit;
         private System.Windows.Forms.ToolStripMenuItem MstItemDelete;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox TbxAddressNumber;
+        private System.Windows.Forms.Label LblAddressNumber;
+        private System.Windows.Forms.Label LblAddressNumberPlaceholder;
+        private System.Windows.Forms.TextBox TbxAddress;
+        private System.Windows.Forms.Label LblAddress;
+        private System.Windows.Forms.Label LblAddressPlaceholder;
         private System.Windows.Forms.Label LblCNPJPlaceholder;
         private System.Windows.Forms.Label LblCNPJ;
         private System.Windows.Forms.MaskedTextBox MTbxCNPJ;
@@ -335,12 +342,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Label LblNamePlaceholder;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TbxAddressNumber;
-        private System.Windows.Forms.Label LblAddressNumber;
-        private System.Windows.Forms.Label LblAddressNumberPlaceholder;
-        private System.Windows.Forms.TextBox TbxAddress;
-        private System.Windows.Forms.Label LblAddress;
-        private System.Windows.Forms.Label LblAddressPlaceholder;
     }
 }

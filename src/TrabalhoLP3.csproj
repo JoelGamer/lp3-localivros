@@ -46,6 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Database\Client.cs" />
+    <Compile Include="Classes\Database\Provider.cs" />
+    <Compile Include="Classes\Database\Purchase.cs" />
+    <Compile Include="Classes\Database\Sale.cs" />
+    <Compile Include="Database\Tables\TableClients.cs" />
+    <Compile Include="Database\Tables\TableProviders.cs" />
+    <Compile Include="Database\Tables\TablePurchases.cs" />
+    <Compile Include="Forms\Finance\Purchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Finance\Purchases.Designer.cs">
+      <DependentUpon>Purchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Finance\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Finance\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Library\Provider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Library\Provider.Designer.cs">
+      <DependentUpon>Provider.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Register\Books.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,12 +83,6 @@
     <Compile Include="Classes\Database\Genre.cs" />
     <Compile Include="Classes\Database\User.cs" />
     <Compile Include="Classes\Utilities.cs" />
-    <Compile Include="CreateLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateLogin.Designer.cs">
-      <DependentUpon>CreateLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Database\Connection.cs" />
     <Compile Include="Database\Tables\TableAuthors.cs" />
     <Compile Include="Database\Tables\TableBooks.cs" />
@@ -74,12 +93,6 @@
     </Compile>
     <Compile Include="Forms\Library\Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Library\Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Library\Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Finance\Stock.cs">
       <SubType>Form</SubType>
@@ -99,37 +112,49 @@
     <Compile Include="Forms\Register\Genre.Designer.cs">
       <DependentUpon>Genre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Security\User.cs">
+    <Compile Include="Forms\Security\Users.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Security\User.Designer.cs">
-      <DependentUpon>User.cs</DependentUpon>
+    <Compile Include="Forms\Security\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="About.cs">
+    <Compile Include="Forms\MainMenu\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
+    <Compile Include="Forms\MainMenu\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Finance\Purchases.resx">
+      <DependentUpon>Purchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Finance\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Finance\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Library\Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Library\Provider.resx">
+      <DependentUpon>Provider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register\Books.resx">
       <DependentUpon>Books.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateLogin.resx">
-      <DependentUpon>CreateLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register\Author.resx">
       <DependentUpon>Author.cs</DependentUpon>
@@ -137,13 +162,13 @@
     <EmbeddedResource Include="Forms\Register\Genre.resx">
       <DependentUpon>Genre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Security\User.resx">
-      <DependentUpon>User.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Security\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,7 +181,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="About.resx">
+    <EmbeddedResource Include="Forms\MainMenu\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -192,6 +217,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchases.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

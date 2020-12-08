@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoLP3.Forms.Finance;
 using TrabalhoLP3.Forms.Library;
+using TrabalhoLP3.Forms.Login;
+using TrabalhoLP3.Forms.MainMenu;
 using TrabalhoLP3.Forms.Register;
 using TrabalhoLP3.Forms.Security;
 
-namespace TrabalhoLP3
+namespace TrabalhoLP3.Forms
 {
     public partial class FrmMainMenu : Form
     {
@@ -124,6 +119,56 @@ namespace TrabalhoLP3
         private void PbxGenre_Click(object sender, EventArgs e)
         {
             OpenSelectedForm(new FrmGenre(this), this);
+        }
+
+        private void BtnPurchases_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmPurchases(this), this);
+        }
+
+        private void PbxPurchases_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmPurchases(this), this);
+        }
+
+        private void BtnSales_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmSales(this), this);
+        }
+
+        private void PbxSales_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmSales(this), this);
+        }
+
+        private void BtnStock_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmStock(this), this);
+        }
+
+        private void PbxStock_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmStock(this), this);
+        }
+
+        private void BtnClients_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmClient(this), this);
+        }
+
+        private void PbxClients_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmClient(this), this);
+        }
+
+        private void BtnProviders_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmProvider(this), this);
+        }
+
+        private void PbxProviders_Click(object sender, EventArgs e)
+        {
+            OpenSelectedForm(new FrmProvider(this), this);
         }
     }
 }

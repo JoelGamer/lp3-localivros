@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrabalhoLP3
+namespace TrabalhoLP3.Forms.MainMenu
 {
     public partial class FrmAbout : Form
     {

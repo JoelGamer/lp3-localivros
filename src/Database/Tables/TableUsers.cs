@@ -26,8 +26,9 @@ namespace TrabalhoLP3.Database.Tables
                 {
                     User user = new User(sqlDataReader.GetInt32(0));
                     user.SetUsername(sqlDataReader.GetString(1));
+                    user.SetPassword(sqlDataReader.GetString(2));
                     user.SetName(sqlDataReader.GetString(3));
-                    user.SetCPF(sqlDataReader.GetInt32(4));
+                    user.SetCPF(sqlDataReader.GetInt64(4));
                     users.Add(user);
                 }
 
@@ -39,10 +40,28 @@ namespace TrabalhoLP3.Database.Tables
             return users;
         }
         
-        public void CreateUser(User user, string password)
+        public void CreateUser(User user)
         {
             string command = "INSERT INTO USERS(name, username, password, cpf) " +
-                "VALUES('" + user.GetName() + "', '" + user.GetUsername() + "', '" + password + "', " + user.GetCPF() + ")";
+                "VALUES('" + user.GetName() + "', '" + user.GetUsername() + "', '" + user.GetPassword() + "', " + user.GetCPF() + ")";
+            GenerateSqlCommand(command).ExecuteNonQuery();
+        }
+
+        public void UpdateUser(int uid, User user)
+        {
+            string command = "UPDATE USERS SET " +
+                "name='" + user.GetName() + "', " +
+                "username='" + user.GetUsername() + "', " +
+                "password='" + user.GetPassword() + "', " +
+                "cpf=" + user.GetCPF() + " " +
+                "WHERE uid=" + uid.ToString();
+
+            GenerateSqlCommand(command).ExecuteNonQuery();
+        }
+
+        public void DeleteUser(User user)
+        {
+            string command = "DELETE FROM users WHERE uid=" + user.GetUid();
             GenerateSqlCommand(command).ExecuteNonQuery();
         }
 

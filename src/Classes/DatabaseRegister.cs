@@ -8,7 +8,7 @@ namespace TrabalhoLP3.Classes
 {
     class DatabaseRegister
     {
-        readonly int uid;
+        private readonly int uid;
 
         public DatabaseRegister() { }
 

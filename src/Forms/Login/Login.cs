@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoLP3.Database.Tables;
 
-namespace TrabalhoLP3
+namespace TrabalhoLP3.Forms.Login
 {
     public partial class FrmLogin : Form
     {
@@ -26,12 +26,6 @@ namespace TrabalhoLP3
         private void btnLogin_Click(object sender, EventArgs e)
         {
             PerformUserLogin();
-        }
-
-        private void LblCreateAccount_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new FrmCreateLogin(this).Show();
         }
 
         private void TbxPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -74,16 +68,6 @@ namespace TrabalhoLP3
             }
 
             Properties.Settings.Default.Save();
-        }
-
-        public string GetTbxUsername()
-        {
-            return tbxUser.Text;
-        }
-
-        public string GetTbxPassword()
-        {
-            return TbxPassword.Text;
         }
 
         private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)

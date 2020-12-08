@@ -7,25 +7,7 @@ CREATE TABLE USERS(
 	password VARCHAR(24) not null,
 	name VARCHAR(80) not null,
 	cpf INT not null,
-	administrator TINYINT not null,
 	PRIMARY KEY(uid),
-);
-
-CREATE TABLE USER_BOOKS(
-	uid INT not null IDENTITY(1,1),
-	user_uid INT not null,
-	book_uid INT not null,
-);
-
-/* CRUD */
-CREATE TABLE USER_PAYMENTS(
-	uid INT not null,
-	user_uid INT not null,
-	card_number VARCHAR(16) not null,
-	security_number INT not null,
-	valid_thru DATE not null,
-	card_name VARCHAR(80) not null,
-	address VARCHAR(120) not null,
 );
 
 /* CRUD */
@@ -54,5 +36,51 @@ CREATE TABLE AUTHOR(
 CREATE TABLE GENRE(
 	uid INT not null IDENTITY(1,1),
 	name VARCHAR(80) not null,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE PURCHASES(
+	uid INT not null IDENTITY(1,1),
+	book_uid INT not null,
+	provider_uid INT not null,
+	quantity INT not null,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE SALES(
+	uid INT not null IDENTITY(1,1),
+	book_uid INT not null,
+	client_uid INT not null,
+	quantity INT not null,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE CLIENTS(
+	uid INT not null IDENTITY(1,1),
+	name VARCHAR(80) not null,
+	cnpj BIGINT not null,
+	address VARCHAR(120) not null,
+	address_number VARCHAR(6) not null,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE PROVIDERS(
+	uid INT not null IDENTITY(1,1),
+	name VARCHAR(80) not null,
+	cnpj BIGINT not null,
+	address VARCHAR(120) not null,
+	address_number VARCHAR(6) not null,
+	PRIMARY KEY(uid),
+);
+
+/* CRUD */
+CREATE TABLE STOCK(
+	uid INT not null IDENTITY(1,1),
+	book_uid INT not null,
+	quantity INT not null,
 	PRIMARY KEY(uid),
 );
