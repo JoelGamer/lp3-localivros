@@ -1,6 +1,6 @@
-﻿namespace TrabalhoLP3.Forms.Security
+﻿namespace TrabalhoLP3.Forms.Finance
 {
-    partial class FrmUser
+    partial class FrmSales
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FrmUser
+            // FrmSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmUser";
-            this.Text = "User";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUser_FormClosing);
+            this.Name = "FrmSales";
+            this.Text = "Vendas";
             this.ResumeLayout(false);
 
         }

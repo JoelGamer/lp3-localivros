@@ -13,21 +13,22 @@ using TrabalhoLP3.Classes.Database;
 
 namespace TrabalhoLP3.Forms.Library
 {
-    public partial class FrmClient : Form
+    public partial class FrmProvider : Form
     {
+
         private readonly string MESSAGE_BOX_HEADER = "Clientes";
 
         private readonly Utilities utilities = new Utilities();
-        private readonly TableClients tableClients = new TableClients();
+        private readonly TableProviders tableProviders = new TableProviders();
         private readonly FrmMainMenu frmMainMenu;
-        private List<Client> clients;
-        private Client currentClient;
+        private List<Provider> providers;
+        private Provider currentProvider;
         private bool isFind;
         private bool isCrud;
         private bool isCreate;
         private int page;
 
-        public FrmClient(FrmMainMenu frmMainMenu)
+        public FrmProvider(FrmMainMenu frmMainMenu)
         {
             InitializeComponent();
             HandleRegisterChanges(0);
@@ -37,33 +38,33 @@ namespace TrabalhoLP3.Forms.Library
         private void HandleRegisterChanges(int page)
         {
             this.page = page;
-            clients = tableClients.GetAll();
+            providers = tableProviders.GetAll();
 
-            if (clients.Count > 0)
+            if (providers.Count > 0)
             {
-                SetFormValues(clients[page]);
+                SetFormValues(providers[page]);
                 return;
             }
 
             ResetFormValues(true);
         }
 
-        private void SetFormValues(Client client)
+        private void SetFormValues(Provider provider)
         {
-            currentClient = client;
-            LblUid.Text = currentClient.GetUid().ToString();
-            LblName.Text = currentClient.GetName();
-            LblCNPJ.Text = currentClient.GetCNPJ().ToString(@"00\.000\.000\\0000-00");
-            LblAddress.Text = currentClient.GetAddress();
-            LblAddressNumber.Text = currentClient.GetAddressNumber();
+            currentProvider = provider;
+            LblUid.Text = currentProvider.GetUid().ToString();
+            LblName.Text = currentProvider.GetName();
+            LblCNPJ.Text = currentProvider.GetCNPJ().ToString(@"00\.000\.000\\0000-00");
+            LblAddress.Text = currentProvider.GetAddress();
+            LblAddressNumber.Text = currentProvider.GetAddressNumber();
 
             MstItemsAvailability(true);
-            ChangeButtonsAvailability((page != 0), ((page + 1) != clients.Count));
+            ChangeButtonsAvailability((page != 0), ((page + 1) != providers.Count));
         }
 
         private void ResetFormValues(bool setAvailability)
         {
-            currentClient = null;
+            currentProvider = null;
             LblUid.Text = "N/D";
             LblName.Text = "N/D";
             LblCNPJ.Text = "N/D";
@@ -136,7 +137,7 @@ namespace TrabalhoLP3.Forms.Library
 
         private void ResetRegisterValues()
         {
-            currentClient = new Client();
+            currentProvider = new Provider();
             TbxName.Text = "";
             MTbxCNPJ.Text = "";
             TbxAddress.Text = "";
@@ -235,7 +236,7 @@ namespace TrabalhoLP3.Forms.Library
         {
             DialogResult result = MessageBox.Show("Deseja apagar o registro?", MESSAGE_BOX_HEADER, MessageBoxButtons.YesNo);
             if (result == DialogResult.No) return;
-            tableClients.DeleteClient(currentClient);
+            tableProviders.DeleteProvider(currentProvider);
 
             page = page == 0 ? page : page--;
             HandleRegisterChanges(page);
@@ -245,11 +246,11 @@ namespace TrabalhoLP3.Forms.Library
         {
             if (isFind)
             {
-                int index = clients.FindIndex(user => user.GetUid() == Convert.ToInt32(TbxUid.Text));
+                int index = providers.FindIndex(user => user.GetUid() == Convert.ToInt32(TbxUid.Text));
 
                 if (index < 0)
                 {
-                    MessageBox.Show("Não existe nenhum cliente com esse id!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Não existe nenhum fornecedor com esse id!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 TbxUid.Text = "";
@@ -260,7 +261,7 @@ namespace TrabalhoLP3.Forms.Library
                 if (index >= 0)
                 {
                     page = index;
-                    SetFormValues(clients[page]);
+                    SetFormValues(providers[page]);
                     MessageBox.Show("Registro encontrado com sucesso!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -278,24 +279,24 @@ namespace TrabalhoLP3.Forms.Library
                     return;
                 }
 
-                Client client = new Client();
-                client.SetName(TbxName.Text);
-                client.SetAddress(TbxAddress.Text);
-                client.SetAddressNumber(TbxAddressNumber.Text);
-                client.SetCNPJ(Convert.ToInt64(utilities.GetStringifiedMaskedTextBox(MTbxCNPJ)));
+                Provider provider = new Provider();
+                provider.SetName(TbxName.Text);
+                provider.SetAddress(TbxAddress.Text);
+                provider.SetAddressNumber(TbxAddressNumber.Text);
+                provider.SetCNPJ(Convert.ToInt64(utilities.GetStringifiedMaskedTextBox(MTbxCNPJ)));
 
                 string message = "";
 
                 if (isCreate)
                 {
-                    tableClients.CreateClient(client);
-                    message = "Cliente criado com successo!";
-                    page = clients.Count == 0 ? page : page++;
+                    tableProviders.CreateProvider(provider);
+                    message = "Fornecedor criado com successo!";
+                    page = providers.Count == 0 ? page : page++;
                 }
                 else
                 {
-                    tableClients.UpdateClient(Convert.ToInt32(LblUid.Text), client);
-                    message = "Cliente alterado com successo!";
+                    tableProviders.UpdateProvider(Convert.ToInt32(LblUid.Text), provider);
+                    message = "Fornecedor alterado com successo!";
                 }
 
                 MessageBox.Show(message, MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -309,7 +310,7 @@ namespace TrabalhoLP3.Forms.Library
             }
 
             page++;
-            SetFormValues(clients[page]);
+            SetFormValues(providers[page]);
         }
 
         private void BtnLeft_Click(object sender, EventArgs e)
@@ -346,10 +347,10 @@ namespace TrabalhoLP3.Forms.Library
             }
 
             page--;
-            SetFormValues(clients[page]);
+            SetFormValues(providers[page]);
         }
 
-        private void FrmClient_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmProvider_FormClosing(object sender, FormClosingEventArgs e)
         {
             frmMainMenu.SetIsFormOpen(false);
         }

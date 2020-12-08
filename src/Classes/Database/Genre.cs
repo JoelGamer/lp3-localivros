@@ -8,7 +8,7 @@ namespace TrabalhoLP3.Classes.Database
 {
     class Genre : DatabaseRegister
     {
-        private string name;
+        public string Name;
 
         public Genre() { }
 
@@ -16,12 +16,12 @@ namespace TrabalhoLP3.Classes.Database
 
         public string GetName()
         {
-            return name;
+            return Name;
         }
 
         public void SetName(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
     }
 }

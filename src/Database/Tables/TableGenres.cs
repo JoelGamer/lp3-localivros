@@ -37,6 +37,29 @@ namespace TrabalhoLP3.Database.Tables
             return genres;
         }
 
+        public Genre GetGenre(int uid)
+        {
+            Genre genre = new Genre(uid);
+            string command = "SELECT * FROM genre WHERE uid = " + uid.ToString();
+
+            SqlCommand sqlCommand = GenerateSqlCommand(command);
+            DataTable dataTable = GenerateDataTable(command);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                sqlDataReader.Read();
+
+                genre.SetName(sqlDataReader.GetString(1));
+
+                sqlDataReader.Close();
+            }
+
+            sqlCommand.Dispose();
+            dataTable.Dispose();
+            return genre;
+        }
+
         public void CreateGenre(Genre genre)
         {
             string command = "INSERT INTO GENRE(name) VALUES('" + genre.GetName() + "')";

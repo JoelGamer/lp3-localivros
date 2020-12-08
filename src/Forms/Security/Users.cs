@@ -11,23 +11,23 @@ using TrabalhoLP3.Database.Tables;
 using TrabalhoLP3.Classes;
 using TrabalhoLP3.Classes.Database;
 
-namespace TrabalhoLP3.Forms.Library
+namespace TrabalhoLP3.Forms.Security
 {
-    public partial class FrmClient : Form
+    public partial class FrmUser : Form
     {
-        private readonly string MESSAGE_BOX_HEADER = "Clientes";
+        private readonly string MESSAGE_BOX_HEADER = "Usuários";
 
         private readonly Utilities utilities = new Utilities();
-        private readonly TableClients tableClients = new TableClients();
+        private readonly TableUsers tableUsers = new TableUsers();
         private readonly FrmMainMenu frmMainMenu;
-        private List<Client> clients;
-        private Client currentClient;
+        private List<User> users;
+        private User currentUser;
         private bool isFind;
         private bool isCrud;
         private bool isCreate;
         private int page;
 
-        public FrmClient(FrmMainMenu frmMainMenu)
+        public FrmUser(FrmMainMenu frmMainMenu)
         {
             InitializeComponent();
             HandleRegisterChanges(0);
@@ -37,38 +37,38 @@ namespace TrabalhoLP3.Forms.Library
         private void HandleRegisterChanges(int page)
         {
             this.page = page;
-            clients = tableClients.GetAll();
+            users = tableUsers.GetAll();
 
-            if (clients.Count > 0)
+            if (users.Count > 0)
             {
-                SetFormValues(clients[page]);
+                SetFormValues(users[page]);
                 return;
             }
 
             ResetFormValues(true);
         }
 
-        private void SetFormValues(Client client)
+        private void SetFormValues(User user)
         {
-            currentClient = client;
-            LblUid.Text = currentClient.GetUid().ToString();
-            LblName.Text = currentClient.GetName();
-            LblCNPJ.Text = currentClient.GetCNPJ().ToString(@"00\.000\.000\\0000-00");
-            LblAddress.Text = currentClient.GetAddress();
-            LblAddressNumber.Text = currentClient.GetAddressNumber();
+            currentUser = user;
+            LblUid.Text = currentUser.GetUid().ToString();
+            LblName.Text = currentUser.GetName();
+            LblCPF.Text = currentUser.GetCPF().ToString(@"000\.000\.000\-00");
+            LblUser.Text = currentUser.GetUsername();
+            LblPassword.Text = currentUser.GetPassword();
 
             MstItemsAvailability(true);
-            ChangeButtonsAvailability((page != 0), ((page + 1) != clients.Count));
+            ChangeButtonsAvailability((page != 0), ((page + 1) != users.Count));
         }
 
         private void ResetFormValues(bool setAvailability)
         {
-            currentClient = null;
+            currentUser = null;
             LblUid.Text = "N/D";
             LblName.Text = "N/D";
-            LblCNPJ.Text = "N/D";
-            LblAddress.Text = "N/D";
-            LblAddressNumber.Text = "N/D";
+            LblCPF.Text = "N/D";
+            LblUser.Text = "N/D";
+            LblPassword.Text = "N/D";
 
             if (setAvailability)
             {
@@ -122,25 +122,25 @@ namespace TrabalhoLP3.Forms.Library
             if (isRegister)
             {
                 LblNamePlaceholder.Text = "*" + LblNamePlaceholder.Text;
-                LblCNPJPlaceholder.Text = "*" + LblCNPJPlaceholder.Text;
-                LblAddressPlaceholder.Text = "*" + LblAddressPlaceholder.Text;
-                LblAddressNumberPlaceholder.Text = "*" + LblAddressNumberPlaceholder.Text;
+                LblCpfPlaceholder.Text = "*" + LblCpfPlaceholder.Text;
+                LblUserPlaceholder.Text = "*" + LblUserPlaceholder.Text;
+                LblPasswordPlaceholder.Text = "*" + LblPasswordPlaceholder.Text;
                 return;
             }
 
             LblNamePlaceholder.Text = LblNamePlaceholder.Text.Substring(1);
-            LblCNPJPlaceholder.Text = LblCNPJPlaceholder.Text.Substring(1);
-            LblAddressPlaceholder.Text = LblAddressPlaceholder.Text.Substring(1);
-            LblAddressNumberPlaceholder.Text = LblAddressNumberPlaceholder.Text.Substring(1);
+            LblCpfPlaceholder.Text = LblCpfPlaceholder.Text.Substring(1);
+            LblUserPlaceholder.Text = LblUserPlaceholder.Text.Substring(1);
+            LblPasswordPlaceholder.Text = LblPasswordPlaceholder.Text.Substring(1);
         }
 
         private void ResetRegisterValues()
         {
-            currentClient = new Client();
+            currentUser = new User();
             TbxName.Text = "";
-            MTbxCNPJ.Text = "";
-            TbxAddress.Text = "";
-            TbxAddressNumber.Text = "";
+            MtxtCPF.Text = "";
+            TbxUser.Text = "";
+            TbxPassword.Text = "";
             SwitchComponentsVisibility();
         }
 
@@ -148,27 +148,27 @@ namespace TrabalhoLP3.Forms.Library
         {
             LblUid.Visible = !LblUid.Visible;
             LblName.Visible = !LblName.Visible;
-            LblCNPJ.Visible = !LblCNPJ.Visible;
-            LblAddress.Visible = !LblAddress.Visible;
-            LblAddressNumber.Visible = !LblAddressNumber.Visible;
+            LblCPF.Visible = !LblCPF.Visible;
+            LblUser.Visible = !LblUser.Visible;
+            LblPassword.Visible = !LblPassword.Visible;
 
             TbxName.Visible = !TbxName.Visible;
-            MTbxCNPJ.Visible = !MTbxCNPJ.Visible;
-            TbxAddress.Visible = !TbxAddress.Visible;
-            TbxAddressNumber.Visible = !TbxAddressNumber.Visible;
+            MtxtCPF.Visible = !MtxtCPF.Visible;
+            TbxUser.Visible = !TbxUser.Visible;
+            TbxPassword.Visible = !TbxPassword.Visible;
         }
 
         private void SetRegisterValuesForEdit()
         {
             TbxName.Text = LblName.Text;
-            MTbxCNPJ.Text = LblCNPJ.Text;
-            TbxAddress.Text = LblAddress.Text;
-            TbxAddressNumber.Text = LblAddressNumber.Text;
+            MtxtCPF.Text = LblCPF.Text;
+            TbxUser.Text = LblUser.Text;
+            TbxPassword.Text = LblPassword.Text;
         }
 
         private bool IsValidForm()
         {
-            string stringifiedCNPJ = utilities.GetStringifiedMaskedTextBox(MTbxCNPJ);
+            string stringifiedCPF = utilities.GetStringifiedMaskedTextBox(MtxtCPF);
 
             if (TbxName.Text.Equals(""))
             {
@@ -176,21 +176,21 @@ namespace TrabalhoLP3.Forms.Library
                 return false;
             }
 
-            if (TbxAddress.Text.Equals("") || TbxAddress.Text.Length < 4)
+            if (TbxUser.Text.Equals("") || TbxUser.Text.Length < 4)
             {
-                MessageBox.Show("A rua do endereço está vazio ou é pequeno demais!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK);
+                MessageBox.Show("O campo username está vazio ou é pequeno demais!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK);
                 return false;
             }
 
-            if (TbxAddressNumber.Text.Equals(""))
+            if (TbxPassword.Text.Equals("") || TbxPassword.Text.Length < 4)
             {
-                MessageBox.Show("O número do endereço está vazio!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK);
+                MessageBox.Show("O campo senha está vazio ou é pequeno demais!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK);
                 return false;
             }
 
-            if (stringifiedCNPJ.Equals("") || stringifiedCNPJ.Length != 14)
+            if (stringifiedCPF.Equals("") || stringifiedCPF.Length != 11)
             {
-                MessageBox.Show("O campo CNPJ está vazio ou é inválido!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK);
+                MessageBox.Show("O campo CPF está vazio ou é inválido!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK);
                 return false;
             }
 
@@ -235,7 +235,7 @@ namespace TrabalhoLP3.Forms.Library
         {
             DialogResult result = MessageBox.Show("Deseja apagar o registro?", MESSAGE_BOX_HEADER, MessageBoxButtons.YesNo);
             if (result == DialogResult.No) return;
-            tableClients.DeleteClient(currentClient);
+            tableUsers.DeleteUser(currentUser);
 
             page = page == 0 ? page : page--;
             HandleRegisterChanges(page);
@@ -245,11 +245,11 @@ namespace TrabalhoLP3.Forms.Library
         {
             if (isFind)
             {
-                int index = clients.FindIndex(user => user.GetUid() == Convert.ToInt32(TbxUid.Text));
+                int index = users.FindIndex(user => user.GetUid() == Convert.ToInt32(TbxUid.Text));
 
                 if (index < 0)
                 {
-                    MessageBox.Show("Não existe nenhum cliente com esse id!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Não existe nenhum usuário com esse id!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 TbxUid.Text = "";
@@ -260,7 +260,7 @@ namespace TrabalhoLP3.Forms.Library
                 if (index >= 0)
                 {
                     page = index;
-                    SetFormValues(clients[page]);
+                    SetFormValues(users[page]);
                     MessageBox.Show("Registro encontrado com sucesso!", MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -278,24 +278,24 @@ namespace TrabalhoLP3.Forms.Library
                     return;
                 }
 
-                Client client = new Client();
-                client.SetName(TbxName.Text);
-                client.SetAddress(TbxAddress.Text);
-                client.SetAddressNumber(TbxAddressNumber.Text);
-                client.SetCNPJ(Convert.ToInt64(utilities.GetStringifiedMaskedTextBox(MTbxCNPJ)));
+                User user = new User();
+                user.SetName(TbxName.Text);
+                user.SetUsername(TbxUser.Text);
+                user.SetPassword(TbxPassword.Text);
+                user.SetCPF(Convert.ToInt64(utilities.GetStringifiedMaskedTextBox(MtxtCPF)));
 
                 string message = "";
 
                 if (isCreate)
                 {
-                    tableClients.CreateClient(client);
-                    message = "Cliente criado com successo!";
-                    page = clients.Count == 0 ? page : page++;
+                    tableUsers.CreateUser(user);
+                    message = "Usuário criado com successo!";
+                    page = users.Count == 0 ? page : page++;
                 }
                 else
                 {
-                    tableClients.UpdateClient(Convert.ToInt32(LblUid.Text), client);
-                    message = "Cliente alterado com successo!";
+                    tableUsers.UpdateUser(Convert.ToInt32(LblUid.Text), user);
+                    message = "Usuário alterado com successo!";
                 }
 
                 MessageBox.Show(message, MESSAGE_BOX_HEADER, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -309,7 +309,7 @@ namespace TrabalhoLP3.Forms.Library
             }
 
             page++;
-            SetFormValues(clients[page]);
+            SetFormValues(users[page]);
         }
 
         private void BtnLeft_Click(object sender, EventArgs e)
@@ -346,17 +346,12 @@ namespace TrabalhoLP3.Forms.Library
             }
 
             page--;
-            SetFormValues(clients[page]);
+            SetFormValues(users[page]);
         }
 
-        private void FrmClient_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             frmMainMenu.SetIsFormOpen(false);
-        }
-
-        private void TbxAddressNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

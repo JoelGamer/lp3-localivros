@@ -8,7 +8,7 @@ namespace TrabalhoLP3.Classes.Database
 {
     class Author : DatabaseRegister
     {
-        private string name;
+        public string Name;
         private DateTime birthDate;
         private DateTime deathDate;
 
@@ -18,12 +18,12 @@ namespace TrabalhoLP3.Classes.Database
 
         public string GetName()
         {
-            return name;
+            return Name;
         }
 
         public void SetName(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public DateTime GetBirthDate()

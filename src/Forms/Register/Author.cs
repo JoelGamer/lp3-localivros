@@ -10,8 +10,8 @@ namespace TrabalhoLP3.Forms.Register
     public partial class FrmAuthor : Form
     {
         private readonly Utilities utilities = new Utilities();
-        private readonly FrmMainMenu frmMainMenu = new FrmMainMenu();
         private readonly TableAuthors tableAuthors = new TableAuthors();
+        private readonly FrmMainMenu frmMainMenu;
         private List<Author> authors;
         private Author currentAuthor;
         private bool isFind;
@@ -187,15 +187,9 @@ namespace TrabalhoLP3.Forms.Register
             DialogResult result = MessageBox.Show("Deseja apagar o registro?", "Autores", MessageBoxButtons.YesNo);
             if (result == DialogResult.No) return;
             tableAuthors.DeleteAuthor(currentAuthor);
-            HandleRegisterChanges(--page);
-        }
 
-        private string GetStringifiedMaskedTextBox(MaskedTextBox maskedTextBox)
-        {
-            maskedTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            string stringifiedText = maskedTextBox.Text;
-            maskedTextBox.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
-            return stringifiedText;
+            page = page == 0 ? page : page--;
+            HandleRegisterChanges(page);
         }
 
         private bool IsValidForm()
@@ -255,7 +249,7 @@ namespace TrabalhoLP3.Forms.Register
                 author.SetName(TbxName.Text);
                 author.SetBirthDate(Convert.ToDateTime(MtxtBirthDate.Text));
 
-                if (!GetStringifiedMaskedTextBox(MtxtDeathDate).Equals(""))
+                if (!utilities.GetStringifiedMaskedTextBox(MtxtDeathDate).Equals(""))
                 {
                     if (!utilities.IsValidDateTime(MtxtDeathDate.Text))
                     {

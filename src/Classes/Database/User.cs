@@ -10,6 +10,7 @@ namespace TrabalhoLP3.Classes.Database
     {
         private string name;
         private string username;
+        private string password;
         private long cpf;
 
         public User() { }
@@ -34,6 +35,16 @@ namespace TrabalhoLP3.Classes.Database
         public void SetUsername(string username)
         {
             this.username = username;
+        }
+
+        public string GetPassword()
+        {
+            return password;
+        }
+
+        public void SetPassword(string password)
+        {
+            this.password = password;
         }
 
         public long GetCPF()

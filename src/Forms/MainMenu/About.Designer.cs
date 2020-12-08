@@ -1,4 +1,4 @@
-﻿namespace TrabalhoLP3
+﻿namespace TrabalhoLP3.Forms.MainMenu
 {
     partial class FrmAbout
     {

@@ -1,4 +1,4 @@
-﻿namespace TrabalhoLP3
+﻿namespace TrabalhoLP3.Forms
 {
     partial class FrmMainMenu
     {
@@ -31,53 +31,53 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TbpRegister = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.PbxAuthor = new System.Windows.Forms.PictureBox();
             this.BtnAuthor = new System.Windows.Forms.Button();
-            this.PbxGenre = new System.Windows.Forms.PictureBox();
             this.BtnGenre = new System.Windows.Forms.Button();
-            this.PbxBooks = new System.Windows.Forms.PictureBox();
             this.BtnBooks = new System.Windows.Forms.Button();
             this.TbpLibrary = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnClients = new System.Windows.Forms.Button();
+            this.BtnProviders = new System.Windows.Forms.Button();
             this.TbpFinance = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnPurchases = new System.Windows.Forms.Button();
+            this.BtnSales = new System.Windows.Forms.Button();
+            this.BtnStock = new System.Windows.Forms.Button();
             this.TbpSecurity = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.PbxUsers = new System.Windows.Forms.PictureBox();
             this.BtnUsers = new System.Windows.Forms.Button();
             this.mstItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.MstItemLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mstItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mstMainMenu = new System.Windows.Forms.MenuStrip();
+            this.PbxAuthor = new System.Windows.Forms.PictureBox();
+            this.PbxGenre = new System.Windows.Forms.PictureBox();
+            this.PbxBooks = new System.Windows.Forms.PictureBox();
+            this.PbxClients = new System.Windows.Forms.PictureBox();
+            this.PbxProviders = new System.Windows.Forms.PictureBox();
+            this.PbxPurchases = new System.Windows.Forms.PictureBox();
+            this.PbxSales = new System.Windows.Forms.PictureBox();
+            this.PbxStock = new System.Windows.Forms.PictureBox();
+            this.PbxUsers = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.TbpRegister.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.TbpLibrary.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.TbpFinance.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.TbpSecurity.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.mstMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxAuthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxBooks)).BeginInit();
-            this.TbpLibrary.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.TbpFinance.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.TbpSecurity.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxProviders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxPurchases)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).BeginInit();
-            this.mstMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -119,17 +119,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // PbxAuthor
-            // 
-            this.PbxAuthor.Image = global::TrabalhoLP3.Properties.Resources.authors;
-            this.PbxAuthor.Location = new System.Drawing.Point(3, 3);
-            this.PbxAuthor.Name = "PbxAuthor";
-            this.PbxAuthor.Size = new System.Drawing.Size(48, 48);
-            this.PbxAuthor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PbxAuthor.TabIndex = 6;
-            this.PbxAuthor.TabStop = false;
-            this.PbxAuthor.Click += new System.EventHandler(this.PbxAuthor_Click);
-            // 
             // BtnAuthor
             // 
             this.BtnAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,17 +130,6 @@
             this.BtnAuthor.UseVisualStyleBackColor = true;
             this.BtnAuthor.Click += new System.EventHandler(this.BtnAuthor_Click);
             // 
-            // PbxGenre
-            // 
-            this.PbxGenre.Image = global::TrabalhoLP3.Properties.Resources.genres;
-            this.PbxGenre.Location = new System.Drawing.Point(3, 57);
-            this.PbxGenre.Name = "PbxGenre";
-            this.PbxGenre.Size = new System.Drawing.Size(48, 48);
-            this.PbxGenre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PbxGenre.TabIndex = 10;
-            this.PbxGenre.TabStop = false;
-            this.PbxGenre.Click += new System.EventHandler(this.PbxGenre_Click);
-            // 
             // BtnGenre
             // 
             this.BtnGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,17 +140,6 @@
             this.BtnGenre.Text = "Gêneros";
             this.BtnGenre.UseVisualStyleBackColor = true;
             this.BtnGenre.Click += new System.EventHandler(this.BtnGenre_Click);
-            // 
-            // PbxBooks
-            // 
-            this.PbxBooks.Image = global::TrabalhoLP3.Properties.Resources.books;
-            this.PbxBooks.Location = new System.Drawing.Point(3, 111);
-            this.PbxBooks.Name = "PbxBooks";
-            this.PbxBooks.Size = new System.Drawing.Size(48, 48);
-            this.PbxBooks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PbxBooks.TabIndex = 8;
-            this.PbxBooks.TabStop = false;
-            this.PbxBooks.Click += new System.EventHandler(this.PbxBooks_Click);
             // 
             // BtnBooks
             // 
@@ -198,55 +165,37 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox5);
-            this.flowLayoutPanel2.Controls.Add(this.button8);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanel2.Controls.Add(this.button7);
+            this.flowLayoutPanel2.Controls.Add(this.PbxClients);
+            this.flowLayoutPanel2.Controls.Add(this.BtnClients);
+            this.flowLayoutPanel2.Controls.Add(this.PbxProviders);
+            this.flowLayoutPanel2.Controls.Add(this.BtnProviders);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
-            // pictureBox5
+            // BtnClients
             // 
-            this.pictureBox5.Image = global::TrabalhoLP3.Properties.Resources.clients;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
+            this.BtnClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClients.Location = new System.Drawing.Point(57, 3);
+            this.BtnClients.Name = "BtnClients";
+            this.BtnClients.Size = new System.Drawing.Size(244, 48);
+            this.BtnClients.TabIndex = 6;
+            this.BtnClients.Text = "Clientes";
+            this.BtnClients.UseVisualStyleBackColor = true;
+            this.BtnClients.Click += new System.EventHandler(this.BtnClients_Click);
             // 
-            // button8
+            // BtnProviders
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(57, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(244, 48);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Clientes";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TrabalhoLP3.Properties.Resources.employees;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 57);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(57, 57);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(244, 48);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Funcionários";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnProviders.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProviders.Location = new System.Drawing.Point(57, 57);
+            this.BtnProviders.Name = "BtnProviders";
+            this.BtnProviders.Size = new System.Drawing.Size(244, 48);
+            this.BtnProviders.TabIndex = 4;
+            this.BtnProviders.Text = "Fornecedores";
+            this.BtnProviders.UseVisualStyleBackColor = true;
+            this.BtnProviders.Click += new System.EventHandler(this.BtnProviders_Click);
             // 
             // TbpFinance
             // 
@@ -261,77 +210,50 @@
             // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.Controls.Add(this.pictureBox6);
-            this.flowLayoutPanel4.Controls.Add(this.button5);
-            this.flowLayoutPanel4.Controls.Add(this.pictureBox8);
-            this.flowLayoutPanel4.Controls.Add(this.button10);
-            this.flowLayoutPanel4.Controls.Add(this.pictureBox7);
-            this.flowLayoutPanel4.Controls.Add(this.button4);
+            this.flowLayoutPanel4.Controls.Add(this.PbxPurchases);
+            this.flowLayoutPanel4.Controls.Add(this.BtnPurchases);
+            this.flowLayoutPanel4.Controls.Add(this.PbxSales);
+            this.flowLayoutPanel4.Controls.Add(this.BtnSales);
+            this.flowLayoutPanel4.Controls.Add(this.PbxStock);
+            this.flowLayoutPanel4.Controls.Add(this.BtnStock);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
-            // pictureBox6
+            // BtnPurchases
             // 
-            this.pictureBox6.Image = global::TrabalhoLP3.Properties.Resources.stock;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
+            this.BtnPurchases.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPurchases.Location = new System.Drawing.Point(57, 3);
+            this.BtnPurchases.Name = "BtnPurchases";
+            this.BtnPurchases.Size = new System.Drawing.Size(244, 48);
+            this.BtnPurchases.TabIndex = 12;
+            this.BtnPurchases.Text = "Compras";
+            this.BtnPurchases.UseVisualStyleBackColor = true;
+            this.BtnPurchases.Click += new System.EventHandler(this.BtnPurchases_Click);
             // 
-            // button5
+            // BtnSales
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(57, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(244, 48);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Compras";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSales.Location = new System.Drawing.Point(57, 57);
+            this.BtnSales.Name = "BtnSales";
+            this.BtnSales.Size = new System.Drawing.Size(244, 48);
+            this.BtnSales.TabIndex = 14;
+            this.BtnSales.Text = "Vendas";
+            this.BtnSales.UseVisualStyleBackColor = true;
+            this.BtnSales.Click += new System.EventHandler(this.BtnSales_Click);
             // 
-            // pictureBox8
+            // BtnStock
             // 
-            this.pictureBox8.Image = global::TrabalhoLP3.Properties.Resources.stock;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 57);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(57, 57);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(244, 48);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "Vendas";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::TrabalhoLP3.Properties.Resources.stock;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 111);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(57, 111);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(244, 48);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Estoque";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStock.Location = new System.Drawing.Point(57, 111);
+            this.BtnStock.Name = "BtnStock";
+            this.BtnStock.Size = new System.Drawing.Size(244, 48);
+            this.BtnStock.TabIndex = 10;
+            this.BtnStock.Text = "Estoque";
+            this.BtnStock.UseVisualStyleBackColor = true;
+            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
             // 
             // TbpSecurity
             // 
@@ -353,17 +275,6 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(304, 448);
             this.flowLayoutPanel3.TabIndex = 1;
-            // 
-            // PbxUsers
-            // 
-            this.PbxUsers.Image = global::TrabalhoLP3.Properties.Resources.users;
-            this.PbxUsers.Location = new System.Drawing.Point(3, 3);
-            this.PbxUsers.Name = "PbxUsers";
-            this.PbxUsers.Size = new System.Drawing.Size(48, 48);
-            this.PbxUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PbxUsers.TabIndex = 2;
-            this.PbxUsers.TabStop = false;
-            this.PbxUsers.Click += new System.EventHandler(this.PbxUsers_Click);
             // 
             // BtnUsers
             // 
@@ -413,6 +324,105 @@
             this.mstMainMenu.TabIndex = 0;
             this.mstMainMenu.Text = "menuStrip1";
             // 
+            // PbxAuthor
+            // 
+            this.PbxAuthor.Image = global::TrabalhoLP3.Properties.Resources.authors;
+            this.PbxAuthor.Location = new System.Drawing.Point(3, 3);
+            this.PbxAuthor.Name = "PbxAuthor";
+            this.PbxAuthor.Size = new System.Drawing.Size(48, 48);
+            this.PbxAuthor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxAuthor.TabIndex = 6;
+            this.PbxAuthor.TabStop = false;
+            this.PbxAuthor.Click += new System.EventHandler(this.PbxAuthor_Click);
+            // 
+            // PbxGenre
+            // 
+            this.PbxGenre.Image = global::TrabalhoLP3.Properties.Resources.genres;
+            this.PbxGenre.Location = new System.Drawing.Point(3, 57);
+            this.PbxGenre.Name = "PbxGenre";
+            this.PbxGenre.Size = new System.Drawing.Size(48, 48);
+            this.PbxGenre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxGenre.TabIndex = 10;
+            this.PbxGenre.TabStop = false;
+            this.PbxGenre.Click += new System.EventHandler(this.PbxGenre_Click);
+            // 
+            // PbxBooks
+            // 
+            this.PbxBooks.Image = global::TrabalhoLP3.Properties.Resources.books;
+            this.PbxBooks.Location = new System.Drawing.Point(3, 111);
+            this.PbxBooks.Name = "PbxBooks";
+            this.PbxBooks.Size = new System.Drawing.Size(48, 48);
+            this.PbxBooks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxBooks.TabIndex = 8;
+            this.PbxBooks.TabStop = false;
+            this.PbxBooks.Click += new System.EventHandler(this.PbxBooks_Click);
+            // 
+            // PbxClients
+            // 
+            this.PbxClients.Image = global::TrabalhoLP3.Properties.Resources.clients;
+            this.PbxClients.Location = new System.Drawing.Point(3, 3);
+            this.PbxClients.Name = "PbxClients";
+            this.PbxClients.Size = new System.Drawing.Size(48, 48);
+            this.PbxClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxClients.TabIndex = 7;
+            this.PbxClients.TabStop = false;
+            this.PbxClients.Click += new System.EventHandler(this.PbxClients_Click);
+            // 
+            // PbxProviders
+            // 
+            this.PbxProviders.Image = global::TrabalhoLP3.Properties.Resources.employees;
+            this.PbxProviders.Location = new System.Drawing.Point(3, 57);
+            this.PbxProviders.Name = "PbxProviders";
+            this.PbxProviders.Size = new System.Drawing.Size(48, 48);
+            this.PbxProviders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxProviders.TabIndex = 5;
+            this.PbxProviders.TabStop = false;
+            this.PbxProviders.Click += new System.EventHandler(this.PbxProviders_Click);
+            // 
+            // PbxPurchases
+            // 
+            this.PbxPurchases.Image = global::TrabalhoLP3.Properties.Resources.purchases;
+            this.PbxPurchases.Location = new System.Drawing.Point(3, 3);
+            this.PbxPurchases.Name = "PbxPurchases";
+            this.PbxPurchases.Size = new System.Drawing.Size(48, 48);
+            this.PbxPurchases.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxPurchases.TabIndex = 13;
+            this.PbxPurchases.TabStop = false;
+            this.PbxPurchases.Click += new System.EventHandler(this.PbxPurchases_Click);
+            // 
+            // PbxSales
+            // 
+            this.PbxSales.Image = global::TrabalhoLP3.Properties.Resources.sales;
+            this.PbxSales.Location = new System.Drawing.Point(3, 57);
+            this.PbxSales.Name = "PbxSales";
+            this.PbxSales.Size = new System.Drawing.Size(48, 48);
+            this.PbxSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxSales.TabIndex = 15;
+            this.PbxSales.TabStop = false;
+            this.PbxSales.Click += new System.EventHandler(this.PbxSales_Click);
+            // 
+            // PbxStock
+            // 
+            this.PbxStock.Image = global::TrabalhoLP3.Properties.Resources.stock;
+            this.PbxStock.Location = new System.Drawing.Point(3, 111);
+            this.PbxStock.Name = "PbxStock";
+            this.PbxStock.Size = new System.Drawing.Size(48, 48);
+            this.PbxStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxStock.TabIndex = 11;
+            this.PbxStock.TabStop = false;
+            this.PbxStock.Click += new System.EventHandler(this.PbxStock_Click);
+            // 
+            // PbxUsers
+            // 
+            this.PbxUsers.Image = global::TrabalhoLP3.Properties.Resources.users;
+            this.PbxUsers.Location = new System.Drawing.Point(3, 3);
+            this.PbxUsers.Name = "PbxUsers";
+            this.PbxUsers.Size = new System.Drawing.Size(48, 48);
+            this.PbxUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PbxUsers.TabIndex = 2;
+            this.PbxUsers.TabStop = false;
+            this.PbxUsers.Click += new System.EventHandler(this.PbxUsers_Click);
+            // 
             // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,26 +445,26 @@
             this.TbpRegister.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxAuthor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxGenre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxBooks)).EndInit();
             this.TbpLibrary.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.TbpFinance.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.TbpSecurity.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).EndInit();
             this.mstMainMenu.ResumeLayout(false);
             this.mstMainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxAuthor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxGenre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxProviders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxPurchases)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,19 +488,19 @@
         private System.Windows.Forms.PictureBox PbxUsers;
         private System.Windows.Forms.PictureBox PbxAuthor;
         private System.Windows.Forms.Button BtnAuthor;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox PbxProviders;
+        private System.Windows.Forms.Button BtnProviders;
         private System.Windows.Forms.PictureBox PbxBooks;
         private System.Windows.Forms.Button BtnBooks;
         private System.Windows.Forms.PictureBox PbxGenre;
         private System.Windows.Forms.Button BtnGenre;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.PictureBox PbxClients;
+        private System.Windows.Forms.Button BtnClients;
+        private System.Windows.Forms.PictureBox PbxStock;
+        private System.Windows.Forms.Button BtnStock;
+        private System.Windows.Forms.PictureBox PbxPurchases;
+        private System.Windows.Forms.Button BtnPurchases;
+        private System.Windows.Forms.PictureBox PbxSales;
+        private System.Windows.Forms.Button BtnSales;
     }
 }
