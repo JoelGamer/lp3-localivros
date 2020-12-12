@@ -77,10 +77,3 @@ CREATE TABLE PROVIDERS(
 	PRIMARY KEY(uid),
 );
 
-/* CRUD */
-CREATE TABLE STOCK(
-	uid INT not null IDENTITY(1,1),
-	book_uid INT not null,
-	quantity INT not null,
-	PRIMARY KEY(uid),
-);

@@ -40,6 +40,61 @@ namespace TrabalhoLP3.Database.Tables
             return clients;
         }
 
+        public Client GetClient(int uid)
+        {
+            Client client = new Client(uid);
+            string command = "SELECT * FROM CLIENTS";
+
+            SqlCommand sqlCommand = GenerateSqlCommand(command);
+            DataTable dataTable = GenerateDataTable(command);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    client.SetName(sqlDataReader.GetString(1));
+                    client.SetCNPJ(sqlDataReader.GetInt64(2));
+                    client.SetAddress(sqlDataReader.GetString(3));
+                    client.SetAddressNumber(sqlDataReader.GetString(4));
+                }
+
+                sqlDataReader.Close();
+            }
+
+            sqlCommand.Dispose();
+            dataTable.Dispose();
+            return client;
+        }
+
+        public Client GetClient(string name)
+        {
+            Client client = new Client();
+            string command = "SELECT * FROM CLIENTS WHERE name LIKE '" + name + "%'";
+
+            SqlCommand sqlCommand = GenerateSqlCommand(command);
+            DataTable dataTable = GenerateDataTable(command);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    client = new Client(sqlDataReader.GetInt32(0));
+                    client.SetName(sqlDataReader.GetString(1));
+                    client.SetCNPJ(sqlDataReader.GetInt64(2));
+                    client.SetAddress(sqlDataReader.GetString(3));
+                    client.SetAddressNumber(sqlDataReader.GetString(4));
+                }
+
+                sqlDataReader.Close();
+            }
+
+            sqlCommand.Dispose();
+            dataTable.Dispose();
+            return client;
+        }
+
         public void CreateClient(Client client)
         {
             string command = "INSERT INTO CLIENTS(name, cnpj, address, address_number) " +

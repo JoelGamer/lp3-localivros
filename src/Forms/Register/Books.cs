@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoLP3.Classes;
 using TrabalhoLP3.Classes.Database;
@@ -426,6 +420,11 @@ namespace TrabalhoLP3.Forms.Register
         private void FrmBooks_FormClosing(object sender, FormClosingEventArgs e)
         {
             frmMainMenu.SetIsFormOpen(false);
+        }
+
+        private void TbxDescription_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -65,10 +65,10 @@
             // LblDescription
             // 
             this.LblDescription.AutoSize = true;
-            this.LblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDescription.Location = new System.Drawing.Point(166, 318);
+            this.LblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDescription.Location = new System.Drawing.Point(12, 350);
             this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(141, 26);
+            this.LblDescription.Size = new System.Drawing.Size(122, 24);
             this.LblDescription.TabIndex = 3;
             this.LblDescription.Text = "_description_";
             // 
@@ -184,12 +184,14 @@
             // 
             // TbxDescription
             // 
-            this.TbxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxDescription.Location = new System.Drawing.Point(166, 315);
+            this.TbxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbxDescription.Location = new System.Drawing.Point(17, 347);
+            this.TbxDescription.Multiline = true;
             this.TbxDescription.Name = "TbxDescription";
-            this.TbxDescription.Size = new System.Drawing.Size(231, 32);
+            this.TbxDescription.Size = new System.Drawing.Size(383, 141);
             this.TbxDescription.TabIndex = 20;
             this.TbxDescription.Visible = false;
+            this.TbxDescription.TextChanged += new System.EventHandler(this.TbxDescription_TextChanged);
             // 
             // TbxPages
             // 

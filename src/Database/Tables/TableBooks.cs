@@ -64,6 +64,32 @@ namespace TrabalhoLP3.Database.Tables
             return book;
         }
 
+        public Book GetBook(string name)
+        {
+            Book book = new Book();
+            string command = "SELECT * FROM BOOK WHERE name LIKE '" + name + "%'";
+
+            SqlCommand sqlCommand = GenerateSqlCommand(command);
+            DataTable dataTable = GenerateDataTable(command);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    book = new Book(sqlDataReader.GetInt32(0));
+                    book.SetName(sqlDataReader.GetString(1));
+                    book.SetPrice(sqlDataReader.GetDouble(7));
+                }
+
+                sqlDataReader.Close();
+            }
+
+            sqlCommand.Dispose();
+            dataTable.Dispose();
+            return book;
+        }
+
         public void CreateBook(Book book)
         {
             string command = "INSERT INTO book(name, description, author, pages, genre, release_date, price) " +

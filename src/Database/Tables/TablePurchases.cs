@@ -39,6 +39,34 @@ namespace TrabalhoLP3.Database.Tables
             return purchases;
         }
 
+        public List<Purchase> GetAll(int bookUID)
+        {
+            List<Purchase> purchases = new List<Purchase>();
+            string command = "SELECT * FROM PURCHASES WHERE book_uid=" + bookUID;
+
+            SqlCommand sqlCommand = GenerateSqlCommand(command);
+            DataTable dataTable = GenerateDataTable(command);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    Purchase purchase = new Purchase(sqlDataReader.GetInt32(0));
+                    purchase.SetBook(new TableBooks().GetBook(sqlDataReader.GetInt32(1)));
+                    purchase.SetProvider(new TableProviders().GetProvider(sqlDataReader.GetInt32(2)));
+                    purchase.SetQuantity(sqlDataReader.GetInt32(3));
+                    purchases.Add(purchase);
+                }
+
+                sqlDataReader.Close();
+            }
+
+            sqlCommand.Dispose();
+            dataTable.Dispose();
+            return purchases;
+        }
+
         public Purchase GetPurchase(int uid)
         {
             Purchase purchase = new Purchase(uid);

@@ -67,6 +67,33 @@ namespace TrabalhoLP3.Database.Tables
             return provider;
         }
 
+        public Provider GetProvider(string name)
+        {
+            Provider provider = new Provider();
+            string command = "SELECT * FROM PROVIDERS WHERE name LIKE '" + name + "%'";
+
+            SqlCommand sqlCommand = GenerateSqlCommand(command);
+            DataTable dataTable = GenerateDataTable(command);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    provider.SetName(sqlDataReader.GetString(1));
+                    provider.SetCNPJ(sqlDataReader.GetInt64(2));
+                    provider.SetAddress(sqlDataReader.GetString(3));
+                    provider.SetAddressNumber(sqlDataReader.GetString(4));
+                }
+
+                sqlDataReader.Close();
+            }
+
+            sqlCommand.Dispose();
+            dataTable.Dispose();
+            return provider;
+        }
+
         public void CreateProvider(Provider provider)
         {
             string command = "INSERT INTO PROVIDERS(name, cnpj, address, address_number) " +

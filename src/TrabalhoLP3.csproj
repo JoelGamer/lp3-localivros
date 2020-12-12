@@ -53,6 +53,7 @@
     <Compile Include="Database\Tables\TableClients.cs" />
     <Compile Include="Database\Tables\TableProviders.cs" />
     <Compile Include="Database\Tables\TablePurchases.cs" />
+    <Compile Include="Database\Tables\TableSales.cs" />
     <Compile Include="Forms\Finance\Purchases.cs">
       <SubType>Form</SubType>
     </Compile>
